@@ -1,0 +1,4 @@
+DB_HOST='localhost'
+DB_NAME='moukthar'
+DB_USER='android'
+DB_PASSWORD='android123'

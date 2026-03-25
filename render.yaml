@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: moukthar-server
+    runtime: php
+    buildCommand: |
+      cd c2-server && composer install
+      cd ../web-socket && composer install
+    startCommand: php web-socket/App.php
+    envVars:
+      - key: DB_HOST
+        value: localhost
+      - key: DB_PORT
+        value: 3306
+      - key: DB_DATABASE
+        value: moukthar
+      - key: DB_USERNAME
+        value: android
+      - key: DB_PASSWORD
+        value: android123
